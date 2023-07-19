@@ -7,12 +7,14 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.utils.viewport.FitViewport;
 
 public class LevelScreen extends BaseScreen {
     private Label messageLabel;
 
     @Override
     public void initialize() {
+        fitViewport = new FitViewport(800, 600);
         camera.setToOrtho(false, 800, 600);
 
         BaseActor background = new BaseActor(0, 0, mainStage);
